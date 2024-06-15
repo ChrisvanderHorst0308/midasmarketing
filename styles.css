@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* == nav == */
+
+
+nav {
+    
+    display: flex;
+    position: relative;
+    color: white;
+    
+    height: 10vh;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+
+    width: 90%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    
+
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.navButtonsHolder {
+    margin-left: auto;
+  
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+   
+}
+
+.navButtonsHolder a:nth-child(1) {
+    opacity: 1;
+    font-weight: 800;
+}
+
+
+.navButtonsHolder a {
+    color: white;
+    text-decoration: none;
+    font-family: system-ui;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-weight: 400;
+    margin-left: 15px;
+    opacity: 0.8;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+header {
+    background-image: url(https://www.salesmates.nl/wp-content/uploads/2024/03/gradient-bg-2-1-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    
+}
+
+.headerHolder {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    width: 90%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-top: 4em;
+}
+
+.headerLeft {
+    text-align: left;
+}
+
+.headerLeftInner {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+}
+
+
+.headerLeft h1 {
+    margin: 0;
+    font-size: 7em;
+}
+
+.headerLeft p {
+    color: white;
+    margin: 0;
+    font-size: 2em;
+}
+
+.headerLeftButtons {
+ 
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.headerLeftButtons a {
+        background: gold;
+    display: flex;
+    margin-right: 2em;
+    padding: 1.5em 3em;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.headerRight {
+        display: flex;
+    margin-left: auto;
+}
+
+#headerImgRight {
+}
+
+header::after {
+bottom: 20vh;
+    content: '';
+    display: flex;
+    background: linear-gradient(to top, #060F19 30%, transparent);
+    width: 100%;
+    position: absolute;
+    height: 20vh;
+}
+
+
+.forward {
+
+}
+
+.forward button {
+        position: relative;
+    z-index: 1;
+    border: none;
+    background: none;
+    margin-top: -1em;
+}
+
+.forward button img {
+
+    height: 5em;
+   
+}
+
+
+/* == main == */
+
+main {
+   background: #060F19;
+ 
+  padding-top: 5vh;
+}
+
+
+
+main section {
+       position: relative;
+    width: 90%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+   
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    
+    
+    
+}
+
+main h2 {
+    font-size: 4em;
+    color: white;
+    text-align: left;
+}
+
+main p {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.section1 {
+
+        display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+}
+
+
+
+.sectionWrapper1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sectionInner1 {
+    width: 30%;
+    gap: 120px;
+}
+
+.section1 h4 {
+    font-size: 2.5em;
+    margin: 1.5em 0;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+
+
+/* - */
+
+.section2 {
+    gap: 10vw;
+    height: 60vh;
+}
+
+.sectionLeft2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    justify-content: center;
+}
+
+.sectionRight2 {
+    background: gray;
+    display: flex;
+    width: 50%;
+}
+
+/* - */
+
+.section3 {
+
+    height: 60vh;
+    background: gray;
+    display: flex;
+}
+
+footer {
+
+    background-color: #252a30;
+    color: white;
+    padding: 1em 0;
+
+    width: 100%;
+    bottom: 0;
+}
