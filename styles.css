@@ -66,7 +66,7 @@ nav {
 
 
 header {
-    background-image: url(https://www.salesmates.nl/wp-content/uploads/2024/03/gradient-bg-2-1-1.png);
+    background-image: url(https://i.ibb.co/d70nc43/gold-tone-gradient-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -76,7 +76,7 @@ header {
 }
 
 .headerHolder {
-    height: 60vh;
+    height: 65vh;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -117,8 +117,15 @@ header {
    
 }
 
+#headerButtonRight {
+    background: none!important;
+    border: solid 2px gold!important;
+    color: white;
+}
+
 .headerLeftButtons a {
         background: gold;
+        color: #746100;
     display: flex;
     margin-right: 2em;
     padding: 1.5em 3em;
@@ -132,17 +139,22 @@ header {
     margin-left: auto;
 }
 
-#headerImgRight {
+.headerRight img {
+    position: relative;
+    bottom: -1em;
+
 }
 
+
+
 header::after {
-bottom: 20vh;
+bottom: 10vh;
     content: '';
     display: flex;
-    background: linear-gradient(to top, #060F19 30%, transparent);
+    background: linear-gradient(to top, #060F19 40%, transparent);
     width: 100%;
     position: absolute;
-    height: 20vh;
+    height: 23vh;
 }
 
 
@@ -171,6 +183,9 @@ main {
    background: #060F19;
  
   padding-top: 5vh;
+  gap: 7vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -184,7 +199,6 @@ main section {
    
     display: flex;
     margin-top: 5vh;
-    margin-bottom: 5vh;
     
     
     
@@ -248,7 +262,7 @@ main p {
 }
 
 .sectionRight2 {
-    background: gray;
+    background: #0f1a2b;
     display: flex;
     width: 50%;
 }
@@ -258,7 +272,7 @@ main p {
 .section3 {
 
     height: 60vh;
-    background: gray;
+    background:#0f1a2b;
     display: flex;
 }
 
