@@ -262,9 +262,17 @@ main p {
 }
 
 .sectionRight2 {
-    background: #0f1a2b;
+    background: #626262;
     display: flex;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionRight2 > img {
+
+    max-width: 80%;
 }
 
 /* - */
@@ -278,7 +286,7 @@ main p {
 
 footer {
 
-    background-color: #252a30;
+    background-color: #2a323e;
     color: white;
     padding: 1em 0;
 
