@@ -8,17 +8,20 @@
 </head>
 <body>
     <header>
-          <nav>       
-         <div id="logo">
-            <img src="logo.png" alt="Midas Marketing">
-         </div>
-         <div class="navButtonsHolder">
-             <a href="">HOME</a>
-             <a href="">OVER ONS</a>
-             <a href="Contact.html">CONTACT</a>
-             <a href="" id="contactButton">NEEM CONTACT OP</a>
+        <nav>
+            <div id="logo">Logo</div>
+            <div class="navButtonsHolder">
+                <a href="">HOME</a>
+                <a href="">OVER ONS</a>
+                <a href="Contact.html">CONTACT</a>
+                <a href="" id="contactButton">NEEM CONTACT OP</a>
             </div>
-    </nav>
+            <div class="hamburger" id="hamburger">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+        </nav>
         <div class="headerHolder">
             <div class="headerLeft">
              <div class="headerLeftInner">
@@ -106,6 +109,21 @@
         document.getElementById('scrollButton').addEventListener('click', function() {
             document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth' });
         });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".navButtonsHolder");
+
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.querySelectorAll('.bar').forEach((bar, index) => {
+            bar.classList.toggle(`change`);
+        });
+    });
+});
+
+
     </script>
 </body>
 </html>

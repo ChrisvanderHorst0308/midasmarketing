@@ -6,49 +6,39 @@ body {
     background-color: #f4f4f4;
 }
 
+
 /* == nav == */
 
-
 nav {
-    
     display: flex;
     position: relative;
     color: white;
-    
     height: 10vh;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: nowrap;
-
     width: 90%;
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
-    
-
 }
 
 #logo {
     display: flex;
     align-items: center;
-
 }
 
 .navButtonsHolder {
     margin-left: auto;
-  
     display: flex;
     align-items: center;
     gap: 2em;
-
-   
 }
 
 .navButtonsHolder a:nth-child(1) {
     opacity: 1;
     font-weight: 800;
 }
-
 
 .navButtonsHolder a {
     color: white;
@@ -64,6 +54,63 @@ nav {
     cursor: pointer;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 600px) {
+    .navButtonsHolder {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        background-color: #333;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navButtonsHolder a {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navButtonsHolder.active {
+        display: flex;
+    }
+
+    .bar1.change {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .bar2.change {
+        opacity: 0;
+    }
+
+    .bar3.change {
+           transform: rotate(45deg) translate(-9px, -10px);
+    }
+}
+
+/*=== header ===*/
 
 header {
     background-image: url(https://i.ibb.co/d70nc43/gold-tone-gradient-bg.png);
@@ -293,3 +340,117 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+
+
+/* Media Query voor telefoon */
+@media (max-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #f4f4f4;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+
+    .navButtonsHolder {
+        flex-direction: column;
+        gap: 1em;
+        margin: 0;
+    }
+
+    .navButtonsHolder a {
+        font-size: 1.2em;
+        margin-left: 0;
+    }
+
+    .headerHolder {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        transform: none;
+        margin-top: 2em;
+    }
+
+    .headerLeft h1 {
+        font-size: 3em;
+    }
+
+    .headerLeft p {
+        font-size: 1.5em;
+    }
+
+    .headerLeftButtons a {
+        padding: 1em 2em;
+        font-size: 1em;
+    }
+
+    .headerRight {
+        justify-content: center;
+        margin: 1em 0;
+    }
+
+    main {
+        padding-top: 2vh;
+        gap: 4vh;
+    }
+
+    main h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    main p {
+        font-size: 1.2em;
+    }
+
+    .sectionWrapper1 {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .sectionInner1 {
+        width: 100%;
+    }
+
+    .section1 h4 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .section2 {
+        flex-direction: column;
+        height: auto;
+        gap: 5vh;
+    }
+
+    .sectionLeft2, .sectionRight2 {
+        width: 100%;
+    }
+
+    .sectionRight2 > img {
+        max-width: 100%;
+    }
+
+    .section3 {
+        flex-direction: column;
+        height: auto;
+        padding: 2em 0;
+    }
+
+    footer {
+        padding: 1em;
+    }
+}
+
