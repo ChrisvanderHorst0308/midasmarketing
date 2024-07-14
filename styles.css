@@ -3,7 +3,26 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f4f4f4;
+   min-height: 100vh;
+  width: 100vw;
+  background: #060f19;
+}
+
+:root {
+    --text-gold-light: #e4c35e;
+    --text-gold-dark: #9a7d2e;
+}
+
+html {
+    background: #060f19;
+    overflow-x: clip;
+    width: 100vw;
+}
+
+ :root {
+    background: #060f19;
+   max-width: 100vw;
+   overflow-x: clip;
 }
 
 
@@ -63,6 +82,11 @@ nav {
     padding: 10px;
 }
 
+.navButtonsHolder.active {
+    z-index: 10000;
+    background: #060F19;
+}
+
 .bar {
     width: 25px;
     height: 3px;
@@ -108,6 +132,8 @@ nav {
     .bar3.change {
            transform: rotate(45deg) translate(-9px, -10px);
     }
+
+    
 }
 
 /*=== header ===*/
@@ -330,10 +356,13 @@ main p {
     background:#0f1a2b;
     display: flex;
 }
+.section3Content1 img {
 
+    max-width: 90%;
+}
 footer {
 
-    background-color: #2a323e;
+    background: #060f19;
     color: white;
     padding: 1em 0;
 
@@ -350,7 +379,7 @@ footer {
         margin: 0;
         padding: 0;
         text-align: center;
-        background-color: #f4f4f4;
+        background: #060f19;
     }
 
     nav {
@@ -450,7 +479,8 @@ footer {
     }
 
     footer {
-        padding: 1em;
+
+        padding: 0em;
     }
 }
 

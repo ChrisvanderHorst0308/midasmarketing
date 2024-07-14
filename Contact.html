@@ -3,17 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midas Marketing</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Pagina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #060f19;
+            color: white;
+
+        }
+
+        :root {
+    --text-gold-light: #e4c35e;
+    --text-gold-dark: #9a7d2e;
+}
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-button {
+            background: linear-gradient(130deg, var(--text-gold-dark), var(--text-gold-light), var(--text-gold-dark));
+
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+       
+        .dropdown-content {
+            margin-top: 2em;
+            display: none;
+            position: relative;
+            border-bottom: solid 2px var(--text-gold-dark);
+            border-top: solid 2px var(--text-gold-dark);
+            min-width: 160px;
+            color: white;
+            z-index: 1;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-out;
+        }
+   
+        .dropdown-content a::before {
+
+            content: "\2192";
+            color: white;
+            position: absolute;
+    left: 10vw;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin-top: 1em;
+    margin-bottom: 1em;
+          
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown.active .dropdown-content {
+            display: block;
+            max-height: 500px; /* Adjust based on content height */
+            animation: slideDown 0.9s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                max-height: 0;
+            }
+            to {
+                max-height: 500px; /* Adjust based on content height */
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var dropdown = document.querySelector(".dropdown");
+            var button = document.querySelector(".dropdown-button");
+            button.addEventListener("click", function() {
+                dropdown.classList.toggle("active");
+            });
+        });
+    </script>
 </head>
 <body>
 
-<main>
+    <h1>NEEM CONTACT MET ONS OP</h1>
+    <p>Ben je benieuwd wat wij voor jou kunnen betekenen op het gebied van sales? Wij leggen je graag meer uit over onze dienstverlening tijdens een bakje koffie.</p>
 
-    <h2>
-        CONTCACT PAGINA
-    </h2>
+    <div class="dropdown">
+        <button class="dropdown-button">Contacteer Ons Nu</button>
+        <div class="dropdown-content">
+            <a href="mailto:info@midasmarketing.nl">E-mail</a>
+            <a href="http://wa.me/+31640815793" target="_blank">WhatsApp</a>
+            <a href="tel:+31640815793">Bellen</a>
+        </div>
+    </div>
 
-</main>
+
 </body>
 </html>
