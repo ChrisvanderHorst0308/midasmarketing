@@ -225,7 +225,7 @@ bottom: 10vh;
     content: '';
     display: flex;
     background: linear-gradient(to top, #060F19 40%, transparent);
-    width: 100%;
+    width: 100vw;
     position: absolute;
     height: 23vh;
 }
@@ -335,12 +335,21 @@ main p {
 }
 
 .sectionRight2 {
-    background: #626262;
+  
+
     display: flex;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.8px);
+-webkit-backdrop-filter: blur(10.8px);
+border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
 .sectionRight2 > img {
@@ -348,18 +357,63 @@ main p {
     max-width: 80%;
 }
 
-/* - */
+/* ---- section3 ----- */
 
 .section3 {
 
-    height: 60vh;
-    background:#0f1a2b;
-    display: flex;
-}
-.section3Content1 img {
+   width: 90vw;
+ /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 5px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.8px);
+-webkit-backdrop-filter: blur(10.8px);
+border: 1px solid rgba(255, 255, 255, 0.26);
 
-    max-width: 90%;
+color: white;
+
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+padding-top: 2em;
+padding-bottom: 2em;
 }
+.section3 p,
+.section3 h2 {
+    width: 80%;
+    text-align: left;
+}
+.section3 img {
+
+    width: 40vw;
+}
+
+
+
+.section3left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.section3left > div,
+.section3right > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section3right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+}
+
+
+
 footer {
 
     background: #060f19;
@@ -472,11 +526,7 @@ footer {
         max-width: 100%;
     }
 
-    .section3 {
-        flex-direction: column;
-        height: auto;
-        padding: 2em 0;
-    }
+
 
     footer {
 
