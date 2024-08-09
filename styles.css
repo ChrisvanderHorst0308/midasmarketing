@@ -343,13 +343,7 @@ main p {
     align-items: center;
     justify-content: center;
 
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.12);
-border-radius: 5px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10.8px);
--webkit-backdrop-filter: blur(10.8px);
-border: 1px solid rgba(255, 255, 255, 0.26);
+
 }
 
 .sectionRight2 > img {
@@ -383,6 +377,11 @@ padding-bottom: 2em;
     width: 80%;
     text-align: left;
 }
+
+.section3 h2 {
+  text-transform: uppercase;
+  font-size: 3.3rem;
+}
 .section3 img {
 
     width: 40vw;
@@ -411,6 +410,15 @@ padding-bottom: 2em;
     align-items: center;
 
 }
+.section3right3 h2 {
+    text-align: center;
+}
+.section3right3 > div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
@@ -425,6 +433,42 @@ footer {
 }
 
 
+
+
+/* ------ animations --------*/
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+  }
+  
+  .fade-up.fade-up-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
+  .flip-up {
+    will-change: opacity, transform;
+  }
+  
+  .flip-up.flip-up-visible {
+    animation: flipUpAnim 1s ease-out forwards;
+  }
+  
+  @keyframes flipUpAnim {
+    0% {
+      opacity: 0;
+      transform: perspective(1000px) rotateX(90deg);
+      transform-origin: bottom;
+    }
+    100% {
+      opacity: 1;
+      transform: perspective(1000px) rotateX(0deg);
+    }
+  }
 
 /* Media Query voor telefoon */
 @media (max-width: 600px) {
@@ -526,6 +570,11 @@ footer {
         max-width: 100%;
     }
 
+
+ .section3right3inner {
+
+    background-color: red!important;
+  }
 
 
     footer {
