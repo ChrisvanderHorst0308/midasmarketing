@@ -42,10 +42,13 @@ nav {
     transform: translateX(-50%);
 }
 
-#logo {
+.logoHolder > img {
     display: flex;
     align-items: center;
+    width: 10vw;
 }
+
+
 
 .navButtonsHolder {
     margin-left: auto;
@@ -208,14 +211,24 @@ header {
 }
 
 .headerRight {
-        display: flex;
+    display: flex;
     margin-left: auto;
+    align-items: flex-start;
+    justify-content: center;
+
 }
+
+.headerRightHolder {
+
+
+}
+
 
 .headerRight img {
     position: relative;
-    bottom: -1em;
-
+    top: 1em;
+    right: 0px;
+    width: 30vw;
 }
 
 
