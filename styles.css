@@ -524,11 +524,14 @@ footer {
     }
 
     .headerLeft h1 {
-        font-size: 3em;
+        font-size: 2em;
+        margin-left: 1em;
     }
 
     .headerLeft p {
-        font-size: 1.5em;
+        font-size: 1.2em;
+        margin-left: 1em;
+
     }
 
     .headerLeftButtons a {
