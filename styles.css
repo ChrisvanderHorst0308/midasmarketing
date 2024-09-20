@@ -209,6 +209,7 @@ header {
 font-size: 0.5em;
 margin-right: 0;
 background-color: gold;
+border: none;
 }
 
 
@@ -684,6 +685,12 @@ footer {
     .section3 p {
         font-size: 1.0em;
     }
+    .section3right3 {
+        background-color: #2e3e4b;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+
+    }
     .section3right {
         display: flex;
         justify-items: center;
@@ -696,6 +703,11 @@ footer {
      
         padding-top: 15px;
         margin-bottom: 2em;
+    }
+
+    footer a {
+
+        color: gold!important;
     }
 
 
