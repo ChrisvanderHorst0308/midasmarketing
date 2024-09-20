@@ -3,18 +3,17 @@ document.getElementById('scrollButton').addEventListener('click', function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.querySelector(".navButtonsHolder");
 
-hamburger.addEventListener("click", () => {
-navMenu.classList.toggle("active");
-hamburger.querySelectorAll('.bar').forEach((bar, index) => {
-    bar.classList.toggle(`change`);
-});
-});
-});
 
+document.getElementById("hamburger").addEventListener("click", function() {
+  var navHolder = document.querySelector(".navButtonsHolder");
+  navHolder.classList.toggle("active");
+  
+  var bars = document.querySelectorAll(".bar");
+  bars[0].classList.toggle("change");
+  bars[1].classList.toggle("change");
+  bars[2].classList.toggle("change");
+});
 
 
 /* === fade up === */

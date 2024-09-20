@@ -41,11 +41,24 @@ nav {
     right: 50%;
     transform: translateX(-50%);
 }
+.logoHolder {
+    align-items: center;
+
+    display: flex;
+}
+
+#logo {
+
+    display: flex;
+}
 
 .logoHolder > img {
     display: flex;
     align-items: center;
-    width: 10vw;
+    display: flex;
+    align-items: center;
+    height: 80%;
+
 }
 
 
@@ -162,6 +175,7 @@ header {
     right: 50%;
     transform: translateX(-50%);
     margin-top: 4em;
+    z-index: 1;
 }
 
 .headerLeft {
@@ -259,7 +273,8 @@ bottom: 10vh;
 .forward button img {
 
     height: 5em;
-   
+    position: relative;
+    bottom: -5em;
 }
 
 
@@ -390,7 +405,10 @@ padding-bottom: 2em;
     width: 80%;
     text-align: left;
 }
+.section3 p {
+font-size: 2.5em;
 
+}
 .section3 h2 {
   text-transform: uppercase;
   font-size: 3.3rem;
@@ -483,16 +501,8 @@ footer {
     }
   }
 
-/* Media Query voor telefoon */
-@media (max-width: 600px) {
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        background: #060f19;
-    }
-
+/* Media Query voor tablets */
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
         height: auto;
@@ -500,6 +510,13 @@ footer {
         left: 0;
         right: 0;
         transform: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .forward button img {
+        height: 2em;
+        position: relative;
+        bottom: -5em;
     }
 
     .navButtonsHolder {
@@ -508,54 +525,78 @@ footer {
         margin: 0;
     }
 
-    .navButtonsHolder a {
-        font-size: 1.2em;
-        margin-left: 0;
-    }
-
     .headerHolder {
         flex-direction: column;
-        height: auto;
         width: 100%;
-        left: 0;
-        right: 0;
-        transform: none;
+        height: auto;
         margin-top: 2em;
+    }
+
+    .logoHolder > img {
+        display: flex;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        max-height: 3em;
+    }
+
+    .headerRightHolder img {
+
+        display: none;
+    }
+
+    #logo {
+
+        display: flex;
+        align-items: center;
+    
     }
 
     .headerLeft h1 {
         font-size: 2em;
-        margin-left: 1em;
-    }
-
-    .headerLeft p {
-        font-size: 1.2em;
-        margin-left: 1em;
-
-    }
-
-    .headerLeftButtons a {
-        padding: 1em 2em;
-        font-size: 1em;
-    }
-
-    .headerRight {
-        justify-content: center;
-        margin: 1em 0;
-    }
-
-    main {
-        padding-top: 2vh;
-        gap: 4vh;
-    }
-
-    main h2 {
-        font-size: 2em;
         text-align: center;
     }
 
+    .headerLeft p {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .headerLeftButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+    
+    }
+
+    header::after {
+        
+            bottom: 10vh;
+            content: '';
+            display: flex;
+            background: linear-gradient(to top, #060F19 40%, transparent);
+            width: 100vw;
+            position: relative;
+            height: 23vh;
+            top: 1em;   
+    }
+    .headerLeftButtons a {
+        padding: 1em 2em;
+        font-size: 0.5em;
+            margin-right: 0;
+    }
+
+    .headerRight img {
+        width: 50vw;
+    }
+
+    main h2 {
+        font-size: 2.5em;
+    }
+
     main p {
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
 
     .sectionWrapper1 {
@@ -566,36 +607,60 @@ footer {
     .sectionInner1 {
         width: 100%;
     }
-
     .section1 h4 {
         font-size: 1.5em;
+        margin: 1.5em 0;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+
+    .section3 h2 {
         text-align: center;
+        font-size: 1em;
     }
 
-    .section2 {
-        flex-direction: column;
-        height: auto;
-        gap: 5vh;
+    .section3 {
+
+        background: none!important;
+        border: none;
     }
 
-    .sectionLeft2, .sectionRight2 {
-        width: 100%;
+    .section3left {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        background-color: #2e3e4b;
+
+        /* background: round; */
+        background-size: 328% 200%;
+        background-position: bottom;
+        border-radius: 5px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   
+        padding-top: 15px;
+        margin-bottom: 2em;
+       
+
     }
 
-    .sectionRight2 > img {
-        max-width: 100%;
+    .section3right {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column-reverse;
+       background-color: #2e3e4b;
+        border-radius: 5px;
+     
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     
+        padding-top: 15px;
+        margin-bottom: 2em;
     }
 
 
- .section3right3inner {
-
-    background-color: red!important;
-  }
-
-
-    footer {
-
-        padding: 0em;
-    }
 }
+
+
 
